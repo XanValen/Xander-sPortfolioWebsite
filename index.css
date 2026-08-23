@@ -1,0 +1,52 @@
+html {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(60, 60, 60);
+    color: rgb(216, 203, 203);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#profile {
+   width: 180px;
+   height: 250px;
+   border-radius: 20%;
+   border: 2px solid black;
+   box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.8);
+}
+
+#education {
+    text-decoration: underline;
+}
+
+#work-experience {
+    text-decoration: underline;
+}
+
+#oneonta-card {
+    display: block;
+    border: 2px solid black;
+    border-radius: 30px;
+    background: linear-gradient(to right, red, black);
+}
+
+#sudexo-card {
+    border: 2px solid black;
+    border-radius: 30px;
+    background: linear-gradient(to right, blue, white);
+}
+
+#nycm-card {
+    border: 2px solid black;
+    border-radius: 30px;
+    background: linear-gradient(to right, orange, rgb(0, 0, 0));
+}
