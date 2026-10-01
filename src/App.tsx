@@ -35,7 +35,7 @@ const EDUCATION = [
 const SKILLS = [
 {
     category: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "HTML", "CSS", "Tailwind CSS"]
+    items: ["React", "Node.js", "TypeScript", "HTML", "CSS", "Tailwind CSS"]
 },
 {
     category: "Backend",
@@ -54,13 +54,11 @@ const PROJECTS = [
     tagline: "",
     description: "A web application that generates personalized Spotify playlists based on user preferences and listening history. Utilizes the Spotify API to fetch data and create dynamic playlists.",
     stack: ["React", "Node.js", "Spotify API"],
-    image: "./assets/images.jpg",
+    image: '../assets/images.jpg',
     year: "2026",
-    github: "https://github.com/XanValen/SpotifyPlaylistBuilder",
-    link: "PlaceHolder"
-}
-]
-
+    link: "#",
+    github: "https://github.com/XanValen/SpotifyPlaylistBuilder"
+}]
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,7 +89,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-full bg-[#080808] text-[#efefef]">
+    <div className="min-h-screen text-[#efefef]">
       {/* ── Nav ── */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#1e1e1e] bg-[#080808]/90 backdrop-blur-md">
         <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
@@ -99,7 +97,7 @@ export default function App() {
             onClick={() => scrollTo("hero")}
             className="font-['Barlow'] font-black text-lg tracking-tight hover:text-[#7c3aed] transition-colors duration-200"
           >
-            JD<span className="text-[#7c3aed]">.</span>
+            XV<span className="text-[#7c3aed]">.</span>
           </button>
 
           {/* Desktop links */}
@@ -157,28 +155,27 @@ export default function App() {
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-            <span className="font-['JetBrains_Mono'] text-[9px] text-[#7c3aed]/60 uppercase tracking-widest text-center leading-tight px-2">
-              Your<br />photo here
+            <span className="border border-black shadow-2xs">
+              <img src="../assets/Profile.jpg" alt="Image of Xander" />
             </span>
             <div className="absolute inset-0 border border-[#7c3aed]/0 group-hover:border-[#7c3aed]/30 transition-colors duration-300" />
           </div>
           <div className="font-['JetBrains_Mono'] text-[8px] text-[#444] uppercase tracking-widest text-center mt-2">
-            Replace src
           </div>
         </div>
 
         <div className="grid md:grid-cols-[1fr_auto] md:items-end gap-8">
           <div>
             <p className="font-['JetBrains_Mono'] text-xs text-[#7c3aed] tracking-widest uppercase mb-6">
-              Available for work · Based in Berlin
+              Available for work · Based in New York, USA
             </p>
             <h1 className="font-['Barlow'] font-black text-[clamp(3.5rem,10vw,9rem)] leading-[0.9] tracking-tighter text-[#efefef] uppercase mb-8">
-              Jordan<br />
-              <span className="text-[#7c3aed]">Davies</span>
+              Xander<br />
+              <span className="text-[#7c3aed]">Valentine</span>
             </h1>
             <p className="text-lg text-[#999] max-w-xl leading-relaxed mb-10">
-              Full-stack developer crafting fast, precise interfaces and resilient APIs.
-              Six years shipping production software — from early-stage startups to distributed teams at scale.
+              Aspiring full-stack developer.
+              Looking for opportunities to contribute and grow.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -199,9 +196,9 @@ export default function App() {
           {/* Stats column */}
           <div className="hidden md:flex flex-col gap-6 pb-2 border-l border-[#222] pl-10">
             {[
-              { value: "6+", label: "Years exp." },
-              { value: "40+", label: "Projects shipped" },
-              { value: "12", label: "Open source repos" },
+              { value: "1+", label: "Years exp." },
+              { value: "5+", label: "Projects" },
+              { value: "5", label: "Open sourcerepos" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-['Barlow'] font-black text-4xl text-[#7c3aed] leading-none">{stat.value}</div>
@@ -237,26 +234,20 @@ export default function App() {
 
           <div className="pt-4 md:pt-20">
             <p className="text-[#999] text-base leading-relaxed mb-6">
-              I'm Jordan Davies, a full-stack developer with a focus on frontend performance and API design.
-              I care deeply about the gap between design intent and engineering output — the invisible work that
-              makes software feel effortless.
-            </p>
-            <p className="text-[#999] text-base leading-relaxed mb-6">
-              Previously at <span className="text-[#efefef]">Tempo</span> (Series B, YC W21), where I led the
-              frontend rewrite that reduced initial load time by 68%. Before that, consultant to product teams
-              across fintech and health-tech.
+              I'm Xander Valentine, an aspiring full-stack developer with a focus on backend development.
+              I care deeply about creating work that lasts and scales.
             </p>
             <p className="text-[#999] text-base leading-relaxed mb-10">
-              When I'm not writing code, I'm contributing to open-source, reading about compilers, or cycling
-              through the Brandenburg countryside.
+              When I'm not Working, I'm Studying to improve my skills and knowledge in all areas of software development and engineering.
+              I'm always looking for new challenges and opportunities to learn and grow.
             </p>
 
             <div className="grid grid-cols-2 gap-px bg-[#1e1e1e] border border-[#1e1e1e]">
               {[
-                { label: "Speciality", value: "Full-stack / Frontend" },
-                { label: "Stack", value: "React, Go, Postgres" },
-                { label: "Availability", value: "Q4 2026" },
-                { label: "Location", value: "Berlin, DE (CET)" },
+                { label: "Speciality", value: "Full-stack / Backend" },
+                { label: "Stack", value: "React, Express.js, Postgres" },
+                { label: "Availability", value: "Open to opportunities" },
+                { label: "Location", value: "Cooperstown, NY" },
               ].map((item) => (
                 <div key={item.label} className="bg-[#080808] px-5 py-4">
                   <div className="font-['JetBrains_Mono'] text-[10px] text-[#555] uppercase tracking-widest mb-1">{item.label}</div>
@@ -319,7 +310,7 @@ export default function App() {
               </h2>
             </div>
             <p className="self-end text-[#666] max-w-lg leading-relaxed">
-              Formal education grounded in computer science fundamentals, extended with professional certifications along the way.
+              Formal education grounded in computer science fundamentals, extended with professional certifications and self-directed learning along the way.
             </p>
           </div>
 
@@ -352,12 +343,11 @@ export default function App() {
               </h2>
             </div>
             <p className="self-end text-[#666] max-w-lg leading-relaxed">
-              Technologies I reach for first — chosen for correctness, not trend.
-              Every item here is something I've used in production.
+              Technologies I've learned over the years.
+              Every item here is something I've used extensively.
             </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1a1a1a] border border-[#1a1a1a]">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a1a] border border-[#1a1a1a]">
             {SKILLS.map((group) => (
               <div key={group.category} className="bg-[#080808] p-6">
                 <div className="font-['JetBrains_Mono'] text-[10px] text-[#7c3aed] uppercase tracking-widest mb-5">
@@ -391,7 +381,7 @@ export default function App() {
               </h2>
             </div>
             <p className="self-end text-[#666] max-w-lg leading-relaxed">
-              A selection of projects that showcase the range — from real-time infrastructure
+              A selection of projects that showcase the range, from real-time infrastructure
               to design systems to developer tooling.
             </p>
           </div>
@@ -458,15 +448,12 @@ export default function App() {
             <h2 className="font-['Barlow'] font-black text-5xl md:text-6xl uppercase leading-tight tracking-tighter mt-6 mb-8">
               Let's<br />talk.
             </h2>
-            <p className="text-[#666] text-sm leading-relaxed mb-8">
-              Open to freelance projects, full-time roles, and interesting collaborations.
-              I typically respond within 24 hours.
-            </p>
+         
             <div className="space-y-4">
               {[
-                { label: "Email", value: "jordan@davies.dev", href: "mailto:jordan@davies.dev" },
-                { label: "GitHub", value: "github.com/jordandavies", href: "#" },
-                { label: "LinkedIn", value: "linkedin.com/in/jordandavies", href: "#" },
+                { label: "Email", value: "Xandervalentine2005@gmail.com", href: "mailto:Xandervalentine2005@gmail.com" },
+                { label: "GitHub", value: "https://github.com/XanValen", href: "#" },
+                { label: "LinkedIn", value: "https://www.linkedin.com/in/xander-valentine-0331ab255/?isSelfProfile=true", href: "#" },
               ].map((link) => (
                 <div key={link.label}>
                   <div className="font-['JetBrains_Mono'] text-[10px] text-[#555] uppercase tracking-widest mb-0.5">{link.label}</div>
@@ -480,76 +467,17 @@ export default function App() {
               ))}
             </div>
           </div>
-
-          <div>
-            {formSent ? (
-              <div className="h-full flex flex-col items-start justify-center py-20">
-                <div className="font-['JetBrains_Mono'] text-[10px] text-[#7c3aed] uppercase tracking-widest mb-4">Message sent</div>
-                <p className="font-['Barlow'] font-black text-4xl uppercase">Got it. I'll be in touch.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-px bg-[#1a1a1a] border border-[#1a1a1a]">
-                {[
-                  { id: "name", label: "Name", type: "text", placeholder: "Your name" },
-                  { id: "email", label: "Email", type: "email", placeholder: "your@email.com" },
-                ].map((field) => (
-                  <div key={field.id} className="bg-[#080808]">
-                    <label
-                      htmlFor={field.id}
-                      className="block font-['JetBrains_Mono'] text-[10px] text-[#555] uppercase tracking-widest px-6 pt-5 pb-1"
-                    >
-                      {field.label}
-                    </label>
-                    <input
-                      id={field.id}
-                      type={field.type}
-                      required
-                      placeholder={field.placeholder}
-                      value={formState[field.id as keyof typeof formState]}
-                      onChange={(e) => setFormState({ ...formState, [field.id]: e.target.value })}
-                      className="w-full bg-transparent px-6 pb-5 text-sm text-[#efefef] placeholder-[#333] outline-none focus:text-[#efefef]"
-                    />
-                  </div>
-                ))}
-                <div className="bg-[#080808]">
-                  <label
-                    htmlFor="message"
-                    className="block font-['JetBrains_Mono'] text-[10px] text-[#555] uppercase tracking-widest px-6 pt-5 pb-1"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={5}
-                    placeholder="Tell me about your project..."
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full bg-transparent px-6 pb-5 text-sm text-[#efefef] placeholder-[#333] outline-none resize-none"
-                  />
-                </div>
-                <div className="bg-[#080808] px-6 py-6">
-                  <button
-                    type="submit"
-                    className="font-['Barlow'] font-semibold text-sm uppercase tracking-wider bg-[#7c3aed] text-[#080808] px-8 py-3 hover:bg-[#8b5cf6] transition-colors duration-200"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            )}
           </div>
-        </div>
       </section>
 
       {/* ── Footer ── */}
       <footer className="border-t border-[#1a1a1a] px-6 py-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="font-['Barlow'] font-black text-lg">
-            JD<span className="text-[#7c3aed]">.</span>
+            XV<span className="text-[#7c3aed]">.</span>
           </span>
           <span className="font-['JetBrains_Mono'] text-[10px] text-[#444] uppercase tracking-widest">
-            © 2026 Jordan Davies — All rights reserved
+            © 2026 Xander Valentine — All rights reserved
           </span>
           <div className="flex gap-6">
             {["GitHub", "LinkedIn", "Resume"].map((item) => (
